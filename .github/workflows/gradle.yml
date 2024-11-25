@@ -55,6 +55,7 @@ jobs:
 
     - name: Send JAR to Discord Webhook
       env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         GITHUB_SHA: ${{ github.sha }}
         GITHUB_REF: ${{ github.ref }}
         GITHUB_REPOSITORY: ${{ github.repository }}
@@ -73,3 +74,4 @@ jobs:
         curl -X POST -H "Content-Type: multipart/form-data" \
           -F "file=@$JAR_PATH" \
           -F "payload_json={\"content\":\"$GIT_COMMIT_AUTHOR pushed $GIT_COMMIT_COMMENT_COUNT changes to the repository $GITHUB_REPOSITORY on branch $GITHUB_REF. Commit URL: $GIT_COMMIT_URL\"}" \
+          $DISCORD_WEBHOOK_URL
