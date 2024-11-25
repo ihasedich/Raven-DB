@@ -53,7 +53,7 @@ jobs:
     - name: Execute Gradle build
       run: ./gradlew build --stacktrace
 
-       - name: Send JAR to Discord Webhook
+    - name: Send JAR to Discord Webhook
       env:
         GITHUB_SHA: ${{ github.sha }}
         GITHUB_REF: ${{ github.ref }}
