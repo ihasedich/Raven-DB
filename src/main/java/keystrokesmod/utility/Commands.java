@@ -246,7 +246,6 @@ public class Commands {
                     Utils.sendMessage("&cError locating folder, recreated.");
                 }
             } else if (firstArg.equals("update")) {
-                Raven.getExecutor().execute(AutoUpdate::update);
             } else if (firstArg.equals("say")) {
                 if (!hasArgs) {
                     print(invSyn, 1);

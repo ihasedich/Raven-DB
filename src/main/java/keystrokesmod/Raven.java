@@ -90,7 +90,6 @@ public class Raven {
         MinecraftForge.EVENT_BUS.register(new MoveableManager());
 
         I18nManager.init();
-        AutoUpdate.init();
     }
 
     @SubscribeEvent

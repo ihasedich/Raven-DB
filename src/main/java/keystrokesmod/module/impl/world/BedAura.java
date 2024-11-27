@@ -72,7 +72,7 @@ public class BedAura extends Module {
     private final Map<BlockPos, Double> breakProgressMap = new HashMap<>();
     public double lastProgress;
     public float vanillaProgress;
-    private final int defaultOutlineColor = new Color(226, 65, 65).getRGB();
+    private final int defaultOutlineColor = new Color(65, 156, 226).getRGB();
 
     public BedAura() {
         super("BedAura", category.world, 0);

@@ -22,7 +22,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'java'
 
 group = "keystrokesmod"
-archivesBaseName = "raven-XD"
+archivesBaseName = "raven-DB"
 //version = "Dev"
 
 compileJava {

@@ -25,6 +25,9 @@ public enum Theme {
     Descriptor(new Color(95, 235, 255), new Color(68, 102, 250)), // 10
     HiddenBind(new Color(245, 33, 33), new Color(229, 21, 98)), // 11
     Astolfo(new Color(255,74,255), new Color(74,255,255), new Color(255,255,255)), // 12 (credit @biPas)
+    Police(new Color(213, 30, 10), new Color(21, 73, 245)), // 13
+    Lavender(new Color(115, 61, 252), new Color(61, 61, 252)), // 14
+    Volcano(new Color(44, 41, 41), new Color(141, 7, 7)), // 14
     Custom();
     private static final Map<Theme, BufferedImage> imageCache = new HashMap<>(values().length);
 
