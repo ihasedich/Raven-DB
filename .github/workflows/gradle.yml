@@ -52,7 +52,7 @@ jobs:
 
     - name: Execute Gradle build
       run: ./gradlew build --stacktrace
-      
+
     - name: Send JAR to Discord Webhook
       env:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
