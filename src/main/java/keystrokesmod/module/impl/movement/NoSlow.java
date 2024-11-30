@@ -32,21 +32,6 @@ public class NoSlow extends Module {
         this.registerSetting(sword, bow, rest);
     }
 
-    @Override
-    public void onEnable() {
-        mode.enable();
-    }
-
-    @Override
-    public void onDisable() {
-        mode.disable();
-    }
-
-    @Override
-    public String getInfo() {
-        return mode.getSubModeValues().get((int) mode.getInput()).getPrettyName();
-    }
-
     public static float getForwardSlowed() {
         if (!mc.thePlayer.isUsingItem()) return 1;
         if (!ModuleManager.noSlow.isEnabled()) return 0.2f;
@@ -77,5 +62,20 @@ public class NoSlow extends Module {
                 return 0.2f;
         }
         return ((INoSlow) mode.getSubModeValues().get((int) mode.getInput())).getStrafeSlowdown();
+    }
+
+    @Override
+    public void onEnable() {
+        mode.enable();
+    }
+
+    @Override
+    public void onDisable() {
+        mode.disable();
+    }
+
+    @Override
+    public String getInfo() {
+        return mode.getSubModeValues().get((int) mode.getInput()).getPrettyName();
     }
 }
